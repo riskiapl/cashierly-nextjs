@@ -3,6 +3,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## Requirements
 
 - Node.js 22.14.0
+- NPM 11.3.0
 
 ## Getting Started
 
