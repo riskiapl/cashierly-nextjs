@@ -1,5 +1,5 @@
 import axios from "axios";
-import { toast } from "@/utils/alert";
+import { toast } from "@/lib/alert";
 
 // Create axios instance with default config
 const axiosInstance = axios.create({
