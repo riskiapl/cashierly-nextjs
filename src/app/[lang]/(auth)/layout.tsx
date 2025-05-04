@@ -1,12 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { Metadata } from "next";
 import { cn } from "@/lib/utils";
-
-export const metadata: Metadata = {
-  title: "Authentication - Cashierly",
-  description: "Authentication pages for Cashierly application",
-};
+import Logo from "@/assets/logo.png";
 
 export default function AuthRootLayout({
   children,
@@ -19,11 +14,11 @@ export default function AuthRootLayout({
         <div className="text-center">
           <div className="flex justify-center">
             <Image
-              src="/logo.svg"
+              src={Logo}
               alt="Cashierly Logo"
-              width={60}
-              height={60}
-              className={cn("h-12 w-auto", "mb-2")}
+              width={100}
+              height={100}
+              className={cn("w-auto", "mb-2")}
               priority
             />
           </div>

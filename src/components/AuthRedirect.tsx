@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import useLanguageStore from "@/store/languageStore";
 
 export default function AuthRedirect({
   children,
@@ -9,16 +10,17 @@ export default function AuthRedirect({
   children: React.ReactNode;
 }) {
   const router = useRouter();
+  const { language } = useLanguageStore();
 
   useEffect(() => {
     const authData = localStorage.getItem("authToken");
 
     if (authData) {
-      router.replace("/dashboard"); // misalnya dashboard sebagai halaman utama setelah login
+      router.replace(`/${language}/dashboard`); // misalnya dashboard sebagai halaman utama setelah login
     } else {
-      router.replace("/login");
+      router.replace(`/${language}/login`);
     }
-  }, [router]);
+  }, [router, language]);
 
   return <>{children}</>;
 }
