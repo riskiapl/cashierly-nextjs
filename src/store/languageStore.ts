@@ -1,16 +1,22 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { LanguageState } from "@/types/languageTypes";
+import {
+  DEFAULT_LANGUAGE,
+  SUPPORTED_LANGUAGES,
+  LANGUAGE_STORAGE_KEY,
+} from "@/lib/helper";
 
 const useLanguageStore = create<LanguageState>()(
   persist(
     (set) => ({
-      language: "id", // Default language
-      languages: ["id", "en"], // List of supported languages
+      language: DEFAULT_LANGUAGE,
+      languages: SUPPORTED_LANGUAGES,
+
       setLanguage: (language: string) => set({ language }),
     }),
     {
-      name: "language-storage", // Name for the storage
+      name: LANGUAGE_STORAGE_KEY,
     }
   )
 );
