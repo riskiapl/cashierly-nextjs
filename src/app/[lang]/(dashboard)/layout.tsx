@@ -1,5 +1,5 @@
 import React from "react";
-import AuthRedirect from "@/components/AuthRedirect";
+import AuthRedirect from "@/context/AuthRedirect";
 
 export default function DashboardRootLayout({
   children,

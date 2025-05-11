@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
+import { TypographyH2, TypographyP } from "@/components/ui/typography";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -27,9 +28,9 @@ export default function LoginPage() {
 
   return (
     <>
-      <h2 className="text-2xl font-semibold text-gray-800 text-center mb-6">
+      <TypographyH2 className="text-center mb-6">
         Login to Your Account
-      </h2>
+      </TypographyH2>
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
@@ -101,7 +102,7 @@ export default function LoginPage() {
       </form>
 
       <div className="text-center mt-6">
-        <p className="text-sm text-gray-600">
+        <TypographyP className="text-sm text-gray-600">
           Don&apos;t have an account?{" "}
           <Link
             href="/register"
@@ -109,7 +110,7 @@ export default function LoginPage() {
           >
             Register here
           </Link>
-        </p>
+        </TypographyP>
       </div>
     </>
   );

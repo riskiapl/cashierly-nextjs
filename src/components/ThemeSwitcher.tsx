@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Switch } from "@/components/ui/switch";
 import { useTheme } from "next-themes";
+import { Sun, Moon } from "lucide-react";
 
 const ThemeSwitcher = () => {
   const { theme, setTheme } = useTheme();
@@ -12,9 +13,9 @@ const ThemeSwitcher = () => {
 
   return (
     <div className="flex items-center gap-2">
-      <span className="text-sm">🌞</span>
+      <Sun size={16} />
       <Switch checked={isDark} onCheckedChange={handleChange} />
-      <span className="text-sm">🌚</span>
+      <Moon size={16} />
     </div>
   );
 };

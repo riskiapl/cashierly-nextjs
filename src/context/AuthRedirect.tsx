@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import useLanguageStore from "@/store/languageStore";
-import PageLoader from "./PageLoader";
+import PageLoader from "../components/PageLoader";
 
 export default function AuthRedirect({
   children,

@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import Logo from "@/assets/logo.png";
-import AuthRedirect from "@/components/AuthRedirect";
+import AuthRedirect from "@/context/AuthRedirect";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import {
   Card,
@@ -21,7 +21,7 @@ export default function AuthRootLayout({
 }) {
   return (
     <AuthRedirect redirectType="auth">
-      <div className="min-h-screen flex items-center justify-center bg-muted py-12 px-4 sm:px-6 lg:px-8 relative">
+      <div className="min-h-screen flex items-center justify-center bg-muted py-6 px-4 sm:px-6 lg:px-8 relative">
         <div className="absolute top-4 right-4 z-10">
           <ThemeSwitcher />
         </div>
