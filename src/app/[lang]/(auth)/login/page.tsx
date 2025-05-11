@@ -3,6 +3,9 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -30,13 +33,13 @@ export default function LoginPage() {
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label
+          <Label
             htmlFor="email"
             className="block text-sm font-medium text-gray-700 mb-1"
           >
             Email Address
-          </label>
-          <input
+          </Label>
+          <Input
             id="email"
             type="email"
             value={email}
@@ -48,13 +51,13 @@ export default function LoginPage() {
         </div>
 
         <div>
-          <label
+          <Label
             htmlFor="password"
             className="block text-sm font-medium text-gray-700 mb-1"
           >
             Password
-          </label>
-          <input
+          </Label>
+          <Input
             id="password"
             type="password"
             value={password}
@@ -67,18 +70,17 @@ export default function LoginPage() {
 
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <input
+            <Checkbox
               id="remember-me"
               name="remember-me"
-              type="checkbox"
               className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
             />
-            <label
+            <Label
               htmlFor="remember-me"
               className="ml-2 block text-sm text-gray-700"
             >
               Remember me
-            </label>
+            </Label>
           </div>
 
           <div className="text-sm">

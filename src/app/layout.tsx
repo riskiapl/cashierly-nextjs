@@ -1,6 +1,8 @@
-import type { Metadata } from "next";
+"use client";
+
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
+import ThemeProvider from "@/context/ThemeProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -18,11 +20,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Cashierly - Financial Management",
-  description: "Cashierly financial management application",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -33,7 +30,9 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
