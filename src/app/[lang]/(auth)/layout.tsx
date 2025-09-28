@@ -1,6 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import Logo from "@/assets/logo.png";
 
 export default function AuthRootLayout({
   children,
